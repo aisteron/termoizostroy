@@ -1,0 +1,135 @@
+.wrapper
+  width: 1920px
+  margin: 0 auto
+  @media(max-width: 1920px)
+    width: 100%
+  >header
+    width: 1170px
+    margin: 0 auto
+    display: flex
+    align-items: center
+    justify-content: space-between
+    font-size: 20px
+    color: $black
+    margin-top: 20px
+    .dsc
+      width: 270px
+    .addr
+      width: 242px
+      position: relative
+      &::before
+        content: url('/assets/img/icons/map.svg')
+        position: absolute
+        left: -25px
+        top: 0
+    .cta
+      display: flex
+      flex-direction: column
+      &:focus-within
+        a
+          color: $red
+        .redbutton
+          background-color: #420F0F
+      .redbutton
+        background-color: #B12929
+        padding: 13px 42px 
+        color: #fff
+        box-shadow: -5px -5px 10px #c7c7c7
+        margin-top: 12px
+        &:hover
+          background-color: #851F1F
+      a.phone
+        color: $black
+        text-decoration: none
+        display: flex
+        align-items: center
+        img
+          margin-right: 10px
+
+section#nav
+  background: linear-gradient(45deg, rgba(40,169,225,1) 0%, rgba(1,115,189,1) 100%)
+  margin-top: 20px
+  ul
+    width: 1170px
+    margin: 0 auto
+    display: flex
+    justify-content: space-between
+    font-size: 24px
+    li
+      &.active a
+        color: #00316E
+      a
+        padding: 25px
+        color: #fff
+        text-decoration: none
+        display: block
+        &:hover
+          text-decoration: underline
+
+body
+  &.index-page
+    .swiper
+      width: 1520px
+      margin: 0 auto
+      @media(max-width: 1520px)
+        width: 90%
+      margin-top: 80px
+      margin-bottom: 130px
+      &-slide
+        display: flex
+        //align-items: center
+        padding: 0 100px
+        .desc
+          display: flex
+          flex-direction: column
+          height: 395px
+          width: 655px
+          justify-content: space-between
+          //margin-left: 100px
+          .h1
+            font-size: 56px
+          .dsc
+            font-size: 32px
+          .redbutton
+            width: 173px 
+            padding: 20px 28px
+            font-size: 20px
+            text-decoration: none
+        .dots
+            &:before
+              content: url(/assets/img/pages/home/ldots.svg)    
+              position: absolute
+              bottom: 78px
+              left: 600px
+              z-index: -1
+            &::after
+              content: url(/assets/img/pages/home/ldots.svg)
+              position: absolute
+              top: 145px
+              right: 250px
+              z-index: -1     
+        .right
+          //margin-right: 100px
+          position: relative
+           
+      &-button-next, &-button-prev
+        background-color: #EEEFF0
+        width: 48px
+        height: 48px
+        &:hover
+          background-color: #E4E5E6   
+      &-button-next
+        &:after
+          content: url(/assets/img/pages/home/right.svg)
+      &-button-prev
+        &:after
+          content: url(/assets/img/pages/home/left.svg)
+      &-pagination
+        top: 66px
+        span
+          width: 45px
+          height: 39px
+          border: 2px solid #0173BD
+          background-color: transparent
+          border-radius: 0
+          margin-bottom: 10px !important

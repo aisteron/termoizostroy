@@ -1,0 +1,46 @@
+$black: #282828
+$red: #B12929
+
+@font-face
+	font-family: 'Marion'
+	font-style: normal
+	font-weight: 400
+	src: local('Marion'), local('Marion-Regular'), url('/assets/fonts/Marion-Regular.woff2') format('woff2')
+	font-display: block
+
+@font-face
+	font-family: 'Marion'
+	font-style: normal
+	font-weight: 500
+	src: local('Narion Bold'), local('Marion-Bold'), url('/assets/fonts/Marion-Bold.woff2') format('woff2')
+	font-display: block
+
+html
+  box-sizing: border-box
+*, *:before, *:after
+  box-sizing: inherit
+
+body
+	margin: 0
+	padding: 0
+	font-family: 'Marion', serif
+
+ul
+	margin: 0
+	padding: 0
+	list-style: none
+.indent
+	text-indent: 1rem 
+
+
+.redbutton
+  background-color: #B12929
+  padding: 13px 42px 
+  color: #fff
+  box-shadow: -5px -5px 10px #c7c7c7
+  margin-top: 12px
+  cursor: pointer
+  transition: background-color 0.3s ease
+  &:hover
+    background-color: #851F1F    	
+  
