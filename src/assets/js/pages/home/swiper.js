@@ -33,5 +33,16 @@ export let swiper = {
         },
       },
     });
+  },
+
+  permit_swiper() {
+    var swiper = new Swiper(".permit-swiper", {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      slidesPerView: 3,
+      spaceBetween: 30,
+    });
   }
 }

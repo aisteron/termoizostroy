@@ -71,16 +71,17 @@ body
   &.index-page
     .swiper
       width: 1520px
-      height: 821px
+      //height: 821px
+      height: 721px
       margin: 0 auto
-      margin-top: 80px
-      margin-bottom: 130px
+      //margin-top: 80px
+      //margin-bottom: 130px
       @media(max-width: 1520px)
         width: 90%
       &-slide
         display: flex
         align-items: center
-        &::after
+        //&::after
           content:url(/assets/img/pages/home/ldots.svg)
           position: absolute
           top: 100px
@@ -109,10 +110,7 @@ body
         .right
           position: relative
           align-self: center
-          &::after
-            content:url(/assets/img/pages/home/ldots.svg)
-            position: absolute
-            z-index: -1  
+ 
            
       &-button-next, &-button-prev
         background-color: #EEEFF0
@@ -135,3 +133,163 @@ body
           background-color: transparent
           border-radius: 0
           margin-bottom: 10px !important
+    .about
+      background-size: cover
+      margin-bottom: 170px
+      .inner
+        height: 701px
+        width: 1170px
+        margin: 0 auto
+        display: flex
+        justify-content: space-between
+        align-items: center
+        .dsc
+          display: flex
+          flex-direction: column
+          .frame
+            background-image: url(/assets/img/pages/home/80.jpg)
+            padding: 30px
+            box-shadow: -5px -5px 10px #C7C7C7
+            margin-top: 24px
+            width: 469px
+            background-size: cover
+            position: relative
+            &:after
+              content: url('/assets/img/pages/home/271.svg')
+              position: absolute
+              top: 97px
+            h1
+              font-size: 24px
+            p
+              font-size: 20px
+              padding-left: 50px
+    .production
+      .inner
+        width: 1200px
+        margin: 0 auto
+      h2
+        font-size: 48px
+        font-weight: normal  
+      ul
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+
+        li
+          min-width: 370px
+          min-height: 170px
+          width: 370px
+          height: 170px
+          background: linear-gradient(45deg,rgba(1,115,189,1)  0%, rgba(40,169,225,1) 100%)
+          margin-right: 30px
+          margin-bottom: 30px
+          box-shadow: $c7
+          display: flex
+          align-items: center
+          position: relative
+          transition: all 0.3s ease
+          &:hover
+            background: linear-gradient(115deg,rgba(177, 41, 41, 1)  0%, rgba(210, 81, 81, 1) 100%)
+          a
+            font-size: 1rem
+            font-weight: bold
+            color: #fff
+            text-decoration: none
+            width: 150px
+            padding-left: 45px
+            &:after
+              position: absolute
+              top: 0
+              right: 0
+              bottom: 0
+              left: 0
+              z-index: 1
+              content: ""
+          img
+            margin-right: -50px
+      .dots
+        height: 60px
+        width: 100%
+        background: url(/assets/img/pages/home/255dot.svg)
+        background-size: cover
+        position: relative
+        top: -150px
+        z-index: -1
+        &:after
+          content: ''
+          background-color: #fff
+          height: 100%
+          width: 846px
+          position: absolute
+          left: -23px
+          right: 0
+          margin-left: auto
+          margin-right: auto
+    .permits
+      margin-bottom: 100px
+      .inner
+        width: 1170px
+        margin: 0 auto
+        padding-bottom: 70px
+        position: relative
+      .permit-swiper
+        position: relative
+        overflow: hidden
+        list-style: none
+        padding: 0
+        z-index: 1
+      .swiper-button-next
+        right: -70px
+      .swiper-button-prev
+        left: -70px
+    .how-to-order
+      .inner
+        width: 1170px
+        margin: 0 auto
+      h2
+        font-size: 48px
+        font-weight: normal  
+      ul
+        display: flex
+        li
+          width: 288px
+          height: 257px
+          background: url('/assets/img/pages/home/howto/413.png')
+          text-align: center
+          display: flex
+          flex-direction: column
+          justify-content: center
+          align-items: center
+          margin-right: 5px
+          &:last-of-type
+            background: url('/assets/img/pages/home/howto/414.png')       
+          span.step
+            font-weight: bold
+            font-size: 32px
+            position: relative
+            left: -20px
+          p
+            max-width: 170px
+            font-size: 20px
+            position: relative
+            left: -20px 
+
+      .dots
+        height: 60px
+        width: 100%
+        background: url(/assets/img/pages/home/255dot.svg)
+        background-size: cover
+        position: relative
+        top: -150px
+        z-index: -1
+        &:after
+          content: ''
+          background-color: #fff
+          height: 100%
+          width: 1228px
+          position: absolute
+          left: -23px
+          right: 0
+          margin-left: auto
+          margin-right: auto
+

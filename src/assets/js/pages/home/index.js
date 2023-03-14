@@ -5,4 +5,5 @@ export async function Home(){
   if(!qs('.index-page')) return
   await swiper.load_swiper()
   swiper.init_swiper()
+  swiper.permit_swiper()
 }
