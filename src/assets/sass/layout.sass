@@ -27,9 +27,10 @@
       flex-direction: column
       &:focus-within
         a
-          color: $red
+          color: $red !important
+          outline: none
         .redbutton
-          background-color: #420F0F
+          background-color: #420F0F 
       .redbutton
         background-color: #B12929
         padding: 13px 42px 
@@ -70,22 +71,30 @@ body
   &.index-page
     .swiper
       width: 1520px
+      height: 821px
       margin: 0 auto
-      @media(max-width: 1520px)
-        width: 90%
       margin-top: 80px
       margin-bottom: 130px
+      @media(max-width: 1520px)
+        width: 90%
       &-slide
         display: flex
-        //align-items: center
-        padding: 0 100px
+        align-items: center
+        &::after
+          content:url(/assets/img/pages/home/ldots.svg)
+          position: absolute
+          top: 100px
+          right: 35px
+          z-index: -1
         .desc
           display: flex
           flex-direction: column
           height: 395px
           width: 655px
           justify-content: space-between
-          //margin-left: 100px
+          margin-left: 120px
+
+          
           .h1
             font-size: 56px
           .dsc
@@ -95,22 +104,15 @@ body
             padding: 20px 28px
             font-size: 20px
             text-decoration: none
-        .dots
-            &:before
-              content: url(/assets/img/pages/home/ldots.svg)    
-              position: absolute
-              bottom: 78px
-              left: 600px
-              z-index: -1
-            &::after
-              content: url(/assets/img/pages/home/ldots.svg)
-              position: absolute
-              top: 145px
-              right: 250px
-              z-index: -1     
+            position: relative
+ 
         .right
-          //margin-right: 100px
           position: relative
+          align-self: center
+          &::after
+            content:url(/assets/img/pages/home/ldots.svg)
+            position: absolute
+            z-index: -1  
            
       &-button-next, &-button-prev
         background-color: #EEEFF0
