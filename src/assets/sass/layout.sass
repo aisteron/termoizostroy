@@ -46,6 +46,73 @@
         align-items: center
         img
           margin-right: 10px
+  >footer
+    background: linear-gradient(315deg, #0D84C9 2.56%, #000012 97.44%)
+    height: 710px
+    a
+      text-decoration: none
+      &:hover
+        text-decoration: underline
+    .inner
+      width: 1170px
+      margin: 0 auto
+      padding-top: 100px
+      .wrap
+        display: flex
+        justify-content: space-between
+        .logo
+          width: 215px
+          color: #B6B6B6
+          display: flex
+          flex-direction: column
+          justify-content: space-between
+          height: 275px
+          font-size: 1rem
+        .nav
+          width: 800px
+          font-size: 24px
+          margin-top: 87px
+          ul.main
+            display: flex
+            justify-content: space-between
+            a
+              color: #67E2FF
+          ul.prods
+            columns: 2
+            margin-top: 43px
+            li
+              margin-bottom: 40px
+            a
+              color: #fff
+    .line
+      background: $bluegrad
+      color: #fff
+      font-size: 18px
+      margin-top: 50px
+      ul
+        display: flex
+        width: 1170px
+        margin: 0 auto
+        justify-content: center
+        li
+          display: flex
+          margin-right: 40px
+          padding: 5px
+          min-width: 200px
+          align-items: center
+          img
+            margin-right: 10px
+    .credentials
+      font-size: 14px
+      text-align: center
+      margin-top: 70px
+      color: #fff
+      a
+        color: #fff
+      span
+        display: inline-block          
+        margin-right: 150px
+
 
 section#nav
   background: linear-gradient(45deg, rgba(40,169,225,1) 0%, rgba(1,115,189,1) 100%)
@@ -232,6 +299,22 @@ body
         margin: 0 auto
         padding-bottom: 70px
         position: relative
+        h2
+          font-size: 48px
+          padding-top: 30px
+          font-weight: normal
+        p
+          font-size: 24px
+          width: 700px
+          color: #282828
+          position: relative
+          margin-bottom: 50px
+          padding-left: 70px  
+          &:before
+            position: absolute
+            content: url(/assets/img/pages/home/271.svg)
+            top: 0
+            left: 0
       .permit-swiper
         position: relative
         overflow: hidden
@@ -251,6 +334,7 @@ body
         font-weight: normal  
       ul
         display: flex
+        margin-top: 90px
         li
           width: 288px
           height: 257px
@@ -258,11 +342,18 @@ body
           text-align: center
           display: flex
           flex-direction: column
-          justify-content: center
           align-items: center
           margin-right: 5px
+          position: relative
+          padding-top: 60px
           &:last-of-type
-            background: url('/assets/img/pages/home/howto/414.png')       
+            background: url('/assets/img/pages/home/howto/414.png')
+          .circle
+            width: 116px
+            height: 116px
+            position: absolute
+            top: -63px
+            left: 70px       
           span.step
             font-weight: bold
             font-size: 32px
@@ -272,7 +363,8 @@ body
             max-width: 170px
             font-size: 20px
             position: relative
-            left: -20px 
+            left: -20px
+            margin-top: 13px 
 
       .dots
         height: 60px
@@ -292,4 +384,138 @@ body
           right: 0
           margin-left: auto
           margin-right: auto
+    .order
+      .inner
+        width: 1170px
+        margin: 0 auto
+        display: flex
+        justify-content: space-between
+        align-items: center
+        height: 587px
+        .left
+          color: #fff
+          align-self: baseline
+          h3
+            font-size: 48px
+            font-weight: normal
+            margin-bottom: 24px
+          p
+            font-size: 36px
+            margin-top: 0
+          form
+            input[type="text"]
+              background-color: transparent
+              border: none
+              border-bottom: 1px solid #fff
+              padding: 5px
+              display: block
+              width: 350px
+              margin-bottom: 20px
+              height: 40px
+              color: #fff
+              font-family: 'Marion'
+              font-size: 20px
+              &::placeholder
+                color: #dadada
+                font-family: 'Marion'
+                font-size: 20px
+              &:focus
+                outline: none
+                background-color: #819eb340
+            .person
+              font-size: 14px
+              margin-bottom: 20px
+              label
+                display: flex
+                align-items: center
+                cursor: pointer
+                &:hover
+                  opacity: 0.7
+              input[type="checkbox"]
+                display: none
+                &:checked ~ .checkmark
+                  &::after
+                    content: url(/assets/img/icons/ok.svg)
+                    position: absolute
+                    top: 4px
+                    left: 3px
+              .checkmark
+                width: 24px
+                height: 24px
+                border: 1px solid #EEEFF0
+                display: inline-block
+                position: relative
+                margin-right: 14px
+            .redbutton
+              outline: none
+              font-family: 'Marion'
+              font-size: 20px
+              border: none
+              box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
+              padding: 20px 70px
+  
+        .address
+          background: url(/assets/img/pages/home/80.jpg)
+          background-size: cover
+          width: 560px
+          height: 348px
+          box-shadow: $c7
+          padding: 40px
+          span.h3
+            font-size: 40px
+            color: $red
+            margin-bottom: 20px
+            display: block
+          ul
+            color: $grey
+            &:nth-of-type(1)
+              margin-bottom: 20px
+              li
+                line-height: 200%
+                &:nth-of-type(1)
+                  font-size: 18px
+                &:nth-of-type(2)
+                  font-size: 24px
+            &:nth-last-of-type(2)
+              font-size: 18px
+                    
+                    
+            li
+              display: flex
+              align-items: center
+              img
+                margin-right: 10px
+    .map
+      height: 528px
+      .inner
+        width: 1170px
+        margin: 0 auto
+        .box
+          background: url(/assets/img/pages/home/80.jpg)
+          background-size: cover
+          width: 370px
+          height: 348px
+          margin-top: -400px
+          position: relative
+          z-index: 10
+          padding: 32px 45px
+          color: $black
+          font-size: 20px
+          box-shadow: -5px -5px 10px #C7C7C7
+          img.logomap
+            margin-bottom: 50px
+          ul
+            li
+              line-height: 250%
+              &:nth-of-type(1)
+                line-height: 100%
+                img
+                  align-self: baseline
+              display: flex
+              align-items: center
+              img
+                margin-right: 10px  
+                
 
+
+          
