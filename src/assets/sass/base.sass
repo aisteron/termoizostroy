@@ -32,6 +32,27 @@ ul
 	margin: 0
 	padding: 0
 	list-style: none
+	&.bread
+		display: flex
+		margin-top: 44px
+		a
+			text-decoration: none
+			font-size: 24px
+			color: $black
+			&:hover
+				text-decoration: underline
+		li
+			margin-right: 35px
+			position: relative
+			&:after
+				content: '//'
+				position: absolute
+				right: -26px
+				top: 0
+				font-size: 24px
+			&:last-of-type
+				&:after
+					content: ''	
 .indent
 	text-indent: 1rem 
 
@@ -45,5 +66,8 @@ ul
   cursor: pointer
   transition: background-color 0.3s ease
   &:hover
-    background-color: #851F1F    	
+    background-color: #851F1F 
+
+.features
+				   	
   
