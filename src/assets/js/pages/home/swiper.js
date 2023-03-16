@@ -19,6 +19,10 @@ export let swiper = {
 
   init_swiper() {
     var swiper = new Swiper(".swiper", {
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: true,
+      },
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -26,11 +30,9 @@ export let swiper = {
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
-        renderBullet: function (index, className) {
-          
-          //return '<span class="' + className + '">' + (index + 1) + "</span>";
-          return `<span class="${className}"></span>`;
-        },
+        renderBullet: (index, className) =>
+          `<span class="${className}"></span>`
+        ,
       },
     });
   },

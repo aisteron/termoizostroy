@@ -12,11 +12,35 @@
     font-size: 20px
     color: $black
     margin-top: 20px
+    
+    @media(max-width: 1170px)
+      width: 100%
+      padding: 0 20px
+    @media(max-width: 730px)
+      box-shadow: 1px 1px 7px #e6e6e6
+      margin-top: 0
+      padding: 10px 20px
+      a.logo img
+        width: 62px
+        height: 33px  
+      img.menu-icon
+        display: block !important
+        cursor: pointer
+      img.phone-big
+        display: block !important
+
     .dsc
       width: 270px
+      @media(max-width: 940px)
+        display: none
     .addr
       width: 242px
       position: relative
+      @media(max-width: 940px)
+        flex-grow: 1
+        margin: 0 30px
+      @media(max-width: 730px)  
+        display: none
       &::before
         content: url('/assets/img/icons/map.svg')
         position: absolute
@@ -25,6 +49,8 @@
     .cta
       display: flex
       flex-direction: column
+      @media(max-width: 730px)
+        display: none
       &:focus-within
         a
           color: $red !important
@@ -49,6 +75,8 @@
   >footer
     background: linear-gradient(315deg, #0D84C9 2.56%, #000012 97.44%)
     height: 710px
+    @media(max-width: 730px)
+      height: auto
     a
       text-decoration: none
       &:hover
@@ -57,9 +85,15 @@
       width: 1170px
       margin: 0 auto
       padding-top: 100px
+      @media(max-width: 1170px)
+        width: 100%
+        padding: 0 20px
+        padding-top: 20px
       .wrap
         display: flex
         justify-content: space-between
+        @media(max-width: 670px)
+          flex-direction: column
         .logo
           width: 215px
           color: #B6B6B6
@@ -68,20 +102,39 @@
           justify-content: space-between
           height: 275px
           font-size: 1rem
+          @media(max-width: 1170px)
+            margin-right: 20px
+            img
+              width: 150px
+          @media(max-width: 500px)
+            height: 200px    
         .nav
           width: 800px
           font-size: 24px
           margin-top: 87px
+          @media(max-width: 1200px)
+            width: 100%
+            margin-top: 55px
           ul.main
             display: flex
             justify-content: space-between
+            @media(max-width: 770px)
+              flex-direction: column
+              font-size: 20px
+              line-height: 150%
             a
               color: #67E2FF
           ul.prods
             columns: 2
             margin-top: 43px
+            @media(max-width: 820px)
+              columns: 1
+              li
+                margin-bottom: 20px
             li
               margin-bottom: 40px
+              @media(max-width: 770px)
+                font-size: 1rem
             a
               color: #fff
     .line
@@ -89,11 +142,17 @@
       color: #fff
       font-size: 18px
       margin-top: 50px
+      @media(max-width: 730px)
+        margin-top: 20px
       ul
         display: flex
         width: 1170px
         margin: 0 auto
         justify-content: center
+        width: 100%
+        @media(max-width: 730px)
+          flex-direction: column
+          padding: 20px
         li
           display: flex
           margin-right: 40px
@@ -107,30 +166,53 @@
       text-align: center
       margin-top: 70px
       color: #fff
+      @media(max-width: 730px)
+        margin-top: 1rem
+        text-align: left
+        padding: 0 20px
+        padding-bottom: 1rem
       a
         color: #fff
       span
         display: inline-block          
         margin-right: 150px
+        @media(max-width: 730px)
+          margin-bottom: 1rem
 
 
 section#nav
   background: linear-gradient(45deg, rgba(40,169,225,1) 0%, rgba(1,115,189,1) 100%)
   margin-top: 20px
+  @media(max-width: 530px)
+    display: none
   ul
     width: 1170px
     margin: 0 auto
     display: flex
     justify-content: space-between
     font-size: 24px
+    @media(max-width: 1170px)
+      width: 100%
+
     li
       &.active a
         color: #00316E
+      &:first-of-type
+        @media(max-width: 860px)
+          a
+            padding-left: 20px  
+      &:last-of-type
+        @media(max-width: 860px)
+          a
+            padding-right: 20px  
       a
         padding: 25px
         color: #fff
         text-decoration: none
         display: block
+        @media(max-width: 860px)
+          font-size: 1rem
+          padding: 10px
         &:hover
           text-decoration: underline
 
@@ -138,22 +220,22 @@ body
   &.index-page
     .swiper
       width: 1520px
-      //height: 821px
       height: 721px
       margin: 0 auto
-      //margin-top: 80px
-      //margin-bottom: 130px
       @media(max-width: 1520px)
-        width: 90%
+        width: 98%
+      @media(max-width: 1000px)
+        height: auto
+        margin: 20px 0
+        margin-bottom: -10px 
       &-slide
         display: flex
         align-items: center
-        //&::after
-          content:url(/assets/img/pages/home/ldots.svg)
-          position: absolute
-          top: 100px
-          right: 35px
-          z-index: -1
+        @media(max-width: 1000px)
+          overflow: hidden
+        @media(max-width: 700px)  
+          flex-direction: column-reverse
+          
         .desc
           display: flex
           flex-direction: column
@@ -161,30 +243,54 @@ body
           width: 655px
           justify-content: space-between
           margin-left: 120px
-
-          
+          @media(max-width: 1000px)
+           margin-left: 30px
+          @media(max-width: 700px)    
+            height: auto
+            width: 100%
           .h1
             font-size: 56px
+            @media(max-width: 1340px)
+              font-size: 32px
+            @media(max-width: 700px)
+              font-size: 24px !important
+              display: block
+              margin: 1rem 0
           .dsc
             font-size: 32px
+            @media(max-width: 1340px)
+              font-size: 20px
+            @media(max-width: 700px)
+              font-size: 1rem !important
+              width: 95% 
           .redbutton
             width: 173px 
             padding: 20px 28px
             font-size: 20px
             text-decoration: none
             position: relative
+            @media(max-width: 1340px)
+              font-size: 1rem
+              width: 136px
+            @media(max-width: 700px)
+              margin-top: 2rem  
  
         .right
           position: relative
           align-self: center
- 
+          @media(max-width: 1340px)
+            width: 600px
+          @media(max-width: 1000px)
+            width: 90% !important 
            
       &-button-next, &-button-prev
         background-color: #EEEFF0
         width: 48px
         height: 48px
         &:hover
-          background-color: #E4E5E6   
+          background-color: #E4E5E6
+        @media(max-width: 1000px)
+          display: none     
       &-button-next
         &:after
           content: url(/assets/img/pages/home/right.svg)
@@ -193,6 +299,14 @@ body
           content: url(/assets/img/pages/home/left.svg)
       &-pagination
         top: 66px
+        left: auto
+        right: 10px
+        width: auto
+        display: flex
+        flex-direction: column
+        top: 55%
+        @media(max-width: 1000px)
+          display: none
         span
           width: 45px
           height: 39px
@@ -201,8 +315,11 @@ body
           border-radius: 0
           margin-bottom: 10px !important
     .about
-      background-size: cover
+      background-size: auto
       margin-bottom: 170px
+      @media(max-width: 700px)
+        margin-bottom: 20px
+        padding-bottom: 20px
       .inner
         height: 701px
         width: 1170px
@@ -210,38 +327,88 @@ body
         display: flex
         justify-content: space-between
         align-items: center
-        .dsc
-          display: flex
+        @media(max-width: 1170px)
+          width: 100%
+          padding: 0 20px
+        @media(max-width: 700px)  
           flex-direction: column
+          height: auto
+        @media(max-width: 505px)
+          padding: 0   
+         
+      .circle
+        height: 70%
+        flex-grow: 1
+        background-size: contain
+        background-repeat: no-repeat
+        background-position: center
+        position: relative
+        //top: -54px
+        @media(max-width: 700px)
+          height: 374px
+          width: 92%
+          top: 20px
+      .dsc
+        display: flex
+        flex-direction: column
+        width: 469px
+        position: relative
+        //top: -60px
+        margin-left: 40px
+        @media(max-width: 1060px)
+          width: 50%
           .frame
-            background-image: url(/assets/img/pages/home/80.jpg)
-            padding: 30px
-            box-shadow: -5px -5px 10px #C7C7C7
-            margin-top: 24px
-            width: 469px
-            background-size: cover
-            position: relative
-            &:after
-              content: url('/assets/img/pages/home/271.svg')
-              position: absolute
-              top: 97px
-            h1
-              font-size: 24px
-            p
-              font-size: 20px
-              padding-left: 50px
+            padding: 20px !important
+        @media(max-width: 700px)    
+          width: 280px !important
+          top: 0
+          display: block
+          img.d315
+            width: 280px
+        @media(max-width: 700px)
+            width: 90% !important
+            margin-left: 0
+            img.d315
+              width: 100% !important
+        .frame
+          background-image: url(/assets/img/pages/home/80.jpg)
+          padding: 30px
+          box-shadow: -5px -5px 10px #C7C7C7
+          margin-top: 24px
+          background-size: cover
+          position: relative
+          &:after
+            content: url('/assets/img/pages/home/271.svg')
+            position: absolute
+            top: 97px
+
+          h1
+            font-size: 24px
+            @media(max-width: 1060px)
+              font-size: 18px
+          p
+            font-size: 20px
+            padding-left: 50px
+            @media(max-width: 1060px)
+              font-size: 1rem
+    
     .production
       .inner
         width: 1200px
         margin: 0 auto
+        @media(max-width: 1220px)
+          width: 100%
+        @media(max-width: 768px)
+          padding: 0 20px   
       h2
         font-size: 48px
-        font-weight: normal  
+        font-weight: normal 
+        @media(max-width: 768px)  
+          font-size: 36px
       ul
         display: flex
         flex-wrap: wrap
         justify-content: center
-
         li
           min-width: 370px
           min-height: 170px
@@ -255,6 +422,10 @@ body
           align-items: center
           position: relative
           transition: all 0.3s ease
+          @media(max-width: 460px) 
+            margin-right: 0
+            min-width: 279px
+            width: 100%
           &:hover
             background: linear-gradient(115deg,rgba(177, 41, 41, 1)  0%, rgba(210, 81, 81, 1) 100%)
           a
@@ -264,6 +435,8 @@ body
             text-decoration: none
             width: 150px
             padding-left: 45px
+            @media(max-width: 460px)
+              padding-left: 20px
             &:after
               position: absolute
               top: 0
@@ -274,6 +447,8 @@ body
               content: ""
           img
             margin-right: -50px
+            @media(max-width: 460px) 
+              transform: scale(0.8)
       .dots
         height: 60px
         width: 100%
@@ -282,6 +457,9 @@ body
         position: relative
         top: -150px
         z-index: -1
+        @media(max-width: 800px) 
+          display: none
+          
         &:after
           content: ''
           background-color: #fff
@@ -292,24 +470,39 @@ body
           right: 0
           margin-left: auto
           margin-right: auto
+          @media(max-width: 1170px) 
+            width: 80%
     .permits
-      margin-bottom: 100px
+      margin-bottom: 70px
       .inner
         width: 1170px
         margin: 0 auto
         padding-bottom: 70px
         position: relative
+        @media(max-width: 1170px) 
+          width: 100%
+          padding: 0 20px
         h2
           font-size: 48px
           padding-top: 30px
           font-weight: normal
+          @media(max-width: 768px) 
+            font-size: 36px
         p
           font-size: 24px
           width: 700px
           color: #282828
           position: relative
           margin-bottom: 50px
-          padding-left: 70px  
+          padding-left: 70px
+          @media(max-width: 768px) 
+            font-size: 1rem
+            padding-left: 50px
+            margin-bottom: 30px
+            width: 90%
+            &:before
+              transform: scale(0.8)  
+              top: -12px
           &:before
             position: absolute
             content: url(/assets/img/pages/home/271.svg)
@@ -321,20 +514,66 @@ body
         list-style: none
         padding: 0
         z-index: 1
+        @media(max-width: 1100px) 
+          .swiper-slide
+            img
+              width: 100%
+      .arrows       
+        position: relative
+        top: 40px
+        display: flex
+        justify-content: center
       .swiper-button-next
         right: -70px
+        display: flex
+        @media(max-width: 1100px)
+          right: auto 
+          position: relative
+          width: 36px
+          height: 36px
+          &:after
+            transform: scale(0.8)
       .swiper-button-prev
         left: -70px
+        display: flex
+        @media(max-width: 1100px)
+          left: auto
+          position: relative
+          margin-right: 50px
+          width: 36px
+          height: 36px
+          &:after
+            transform: scale(0.8)
+
+
     .how-to-order
       .inner
         width: 1170px
         margin: 0 auto
+        @media(max-width: 1170px)
+          width: 100%
+          padding: 0 20px
+          padding-bottom: 60px
       h2
         font-size: 48px
-        font-weight: normal  
+        font-weight: normal
+        @media(max-width: 1200px)   
+          margin-top: 0
+        @media(max-width: 980px)
+          font-size: 36px
+        @media(max-width: 500px)
+          font-size: 20px
       ul
         display: flex
         margin-top: 90px
+        @media(max-width: 1170px)
+          margin-left: -34px
+        @media(max-width: 980px)
+          margin-left: -46px
+        @media(max-width: 870px)    
+          flex-direction: column
+          margin-left: 0px !important
+          align-items: center
         li
           width: 288px
           height: 257px
@@ -346,6 +585,36 @@ body
           margin-right: 5px
           position: relative
           padding-top: 60px
+          @media(max-width: 1170px) 
+            transform: scale(0.8)
+            min-width: 288px
+            margin-left: -40px
+            &:first-of-type
+              margin-left: 0
+          @media(max-width: 1170px) 
+            margin-left: -55px
+          @media(max-width: 980px)
+            transform: scale(0.7)
+            margin-left: -82px
+          @media(max-width: 870px)
+            margin-left: 0 !important
+            transform: rotate(90deg)
+            flex-direction: initial
+            padding: 0
+            margin-bottom: 40px
+            height: 259px
+            >*
+              transform: rotate(-90deg)
+            span.step
+              left: 24px 
+            p
+              left: -40px
+              font-size: 1rem
+            &:nth-of-type(2), &:nth-of-type(4),
+              .circle
+                top: 190px
+            &:last-of-type
+              background: url('/assets/img/pages/home/howto/415.png')   
           &:last-of-type
             background: url('/assets/img/pages/home/howto/414.png')
           .circle
@@ -360,7 +629,7 @@ body
             position: relative
             left: -20px
           p
-            max-width: 170px
+            max-width: 165px
             font-size: 20px
             position: relative
             left: -20px
@@ -374,6 +643,8 @@ body
         position: relative
         top: -150px
         z-index: -1
+        @media(max-width: 1200px)
+          display: none
         &:after
           content: ''
           background-color: #fff
