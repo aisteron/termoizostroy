@@ -71,29 +71,7 @@
         img(src="/assets/img/pages/home/prod/051.png")
   .dots
 
-.permits.lazyload(data-bg="/assets/img/pages/home/permits/74.png")
-  .inner
-    h2 Разрешительные документы
-    p Продукция соответствует стандартам Таможенного Союза, сертифицирована белорусскими испытательными центрами. Чтобы вы лично убедились в качестве, мы предоставляем образцы продукции для испытаний.
-
-    .permit-swiper
-      .swiper-wrapper
-        .swiper-slide
-          a(href="https://google.com" target="_blank")
-            img(src="/assets/img/pages/home/permits/01.jpg")
-        .swiper-slide
-          a(href="https://google.com" target="_blank")
-            img(src="/assets/img/pages/home/permits/02.jpg")
-        .swiper-slide
-          a(href="https://google.com" target="_blank")
-            img(src="/assets/img/pages/home/permits/03.jpg")
-        .swiper-slide
-          a(href="https://google.com" target="_blank")
-            img(src="/assets/img/pages/home/permits/03.jpg")
-    .arrows
-      .swiper-button-prev
-      .swiper-button-next
-
+include ../ui/permit
 .how-to-order
   .inner
     h2 Как заказать продукцию?
@@ -115,35 +93,7 @@
         span.step Шаг 4
         p Доставка или самовывоз со склада
   .dots    
-
-.order.lazyload(data-bg="/assets/img/pages/home/order/415bg.jpg")
-  .inner
-    .left
-      h3 Заказать продукцию
-      p Оставьте заявку и наши менеджеры свяжутся с вами
-      form
-        input(type="text" required placeholder="Имя *")
-        input(type="text" required placeholder="Телефон для связи*")
-        .person
-          label
-            input(type="checkbox" checked)
-            span.checkmark
-            span.agree Я согласен(-на) на обработку персональных данных
-        input.redbutton(type="submit" value="Заказать")
-    .address
-      span.h3 Отдел продаж
-      ul
-        li
-          img(src="/assets/img/icons/phone.svg")    
-          span +375 (29) 658–83–15
-        li
-          img(src="/assets/img/icons/envelope.svg")  
-          span termozs@mail.ru
-      span.h3 Адрес
-      ul
-        li
-          img(src="/assets/img/icons/map.svg")    
-          span Минская обл., Дзержинский р-н, д. Гарбузы, здание котельной
+include ../ui/order
 
 .map
   iframe.lazyload(data-src="https://yandex.ru/map-widget/v1/?um=constructor%3A72edc43c890c3bce5590835a5077efa8663b0c7bbdd3fb6afaa4f5e736a7bf1c&amp;source=constructor" width="100%" height="100%" frameborder="0")

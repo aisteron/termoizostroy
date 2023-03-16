@@ -56,6 +56,7 @@ ul
 .indent
 	text-indent: 1rem 
 
+// UI
 
 .redbutton
   background-color: #B12929
@@ -67,7 +68,258 @@ ul
   transition: background-color 0.3s ease
   &:hover
     background-color: #851F1F 
-
 .features
-				   	
-  
+  background: url(/assets/img/pages/about/features/bg.jpg)
+  background-size: cover
+  ul
+    display: flex
+    justify-content: space-between
+    li
+      background: $bluegrad
+      color: #fff
+      font-size: 1rem
+      text-align: center
+      box-shadow: $c7
+      img
+        margin-right: 1rem
+  &.three
+    padding: 34px
+    ul
+      li
+        width: 210px
+        height: 116px
+        display: flex
+        align-items: center
+        justify-content: center
+.permits
+  margin-bottom: 70px
+  .inner
+    width: 1170px
+    margin: 0 auto
+    padding-bottom: 70px
+    position: relative
+    @media(max-width: 1170px) 
+      width: 100%
+      padding: 0 20px
+      padding-bottom: 60px
+    h2
+      font-size: 48px
+      padding-top: 30px
+      font-weight: normal
+      @media(max-width: 768px) 
+        font-size: 36px
+    p
+      font-size: 24px
+      width: 700px
+      color: #282828
+      position: relative
+      margin-bottom: 50px
+      padding-left: 70px
+      @media(max-width: 768px) 
+        font-size: 1rem
+        padding-left: 50px
+        margin-bottom: 30px
+        width: 90%
+        &:before
+          transform: scale(0.8)  
+          top: -12px
+      &:before
+        position: absolute
+        content: url(/assets/img/pages/home/271.svg)
+        top: 0
+        left: 0
+  .permit-swiper
+    position: relative
+    overflow: hidden
+    list-style: none
+    padding: 0
+    z-index: 1
+    @media(max-width: 1100px) 
+      .swiper-slide
+        img
+          width: 100%
+  .arrows       
+    position: relative
+    top: -240px
+    display: flex
+    justify-content: center
+    @media(max-width: 1230px)
+      top: 40px
+  .swiper-button-next
+    right: -70px
+    display: flex !important
+    &:after
+      content: url(/assets/img/pages/home/right.svg)
+    @media(max-width: 1100px)
+      right: auto 
+      position: relative
+      width: 36px
+      height: 36px
+      &:after
+        transform: scale(0.8)
+  .swiper-button-prev
+    left: -70px
+    display: flex !important
+    &:after
+      content: url(/assets/img/pages/home/left.svg)
+
+    @media(max-width: 1100px)
+      left: auto
+      position: relative
+      margin-right: 50px
+      width: 36px
+      height: 36px
+      &:after
+        transform: scale(0.8)
+  .swiper-button-next, .swiper-button-prev
+    background-color: #EEEFF0
+    width: 48px
+    height: 48px
+    &:hover
+      background-color: #E4E5E6
+.order
+  .inner
+    width: 1170px
+    margin: 0 auto
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: 587px
+
+    @media(max-width: 1340px)
+      width: 100%
+      padding: 0 20px
+    @media(max-width: 780px)
+      height: auto
+      padding-bottom: 40px  
+    .left
+      color: #fff
+      align-self: baseline
+      h3
+        font-size: 48px
+        font-weight: normal
+        margin-bottom: 24px
+        @media(max-width: 1340px)
+          font-size: 36px
+        @media(max-width: 760px)
+          font-size: 20px  
+      p
+        font-size: 36px
+        margin-top: 0
+        @media(max-width: 1340px)
+          font-size: 15px
+        @media(max-width: 760px)  
+          font-size: 1rem
+      form
+        input[type="text"]
+          background-color: transparent
+          border: none
+          border-bottom: 1px solid #fff
+          padding: 5px
+          display: block
+          width: 350px
+          margin-bottom: 20px
+          height: 40px
+          color: #fff
+          font-family: 'Marion'
+          font-size: 20px
+          @media(max-width: 780px)
+            width: 100%
+          &::placeholder
+            color: #dadada
+            font-family: 'Marion'
+            font-size: 20px
+            @media(max-width: 760px)
+              font-size: 1rem
+          &:focus
+            outline: none
+            background-color: #819eb340
+        .person
+          font-size: 14px
+          margin-bottom: 20px
+          @media(max-width: 780px)
+            font-size: 13px
+          label
+            display: flex
+            align-items: center
+            cursor: pointer
+            &:hover
+              opacity: 0.7
+          input[type="checkbox"]
+            display: none
+            &:checked ~ .checkmark
+              &::after
+                content: url(/assets/img/icons/ok.svg)
+                position: absolute
+                top: 4px
+                left: 3px
+          .checkmark
+            width: 24px
+            height: 24px
+            border: 1px solid #EEEFF0
+            display: inline-block
+            position: relative
+            margin-right: 14px
+        .redbutton
+          outline: none
+          font-family: 'Marion'
+          font-size: 20px
+          border: none
+          box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
+          padding: 20px 70px
+
+    .address
+      background: url(/assets/img/pages/home/80.jpg)
+      background-size: cover
+      width: 560px
+      height: 348px
+      box-shadow: $c7
+      padding: 40px
+      @media(max-width: 1340px)
+        width: 340px
+        height: auto
+        padding: 24px
+      @media(max-width: 760px)
+        display: none  
+      span.h3
+        font-size: 40px
+        color: $red
+        margin-bottom: 20px
+        display: block
+        @media(max-width: 780px)
+          font-size: 20px
+      ul
+        color: $grey
+        &:nth-of-type(1)
+          margin-bottom: 20px
+          li
+            line-height: 200%
+            &:nth-of-type(1)
+              font-size: 18px
+            &:nth-of-type(2)
+              font-size: 24px
+              @media(max-width: 780px)
+                font-size: 1rem
+        &:nth-last-of-type(2)
+          font-size: 18px
+                
+                
+        li
+          display: flex
+          align-items: center
+          img
+            margin-right: 10px
+.notification
+  position: relative
+  background: url(/assets/img/icons/78.jpg)
+  background-size: contain
+  background-repeat: no-repeat 
+  span
+    font-size: 40px
+    font-weight: bold
+  &:before
+    content: url(/assets/img/pages/home/272.svg)
+    position: absolute
+    left: -47px
+    top: 1px
+      

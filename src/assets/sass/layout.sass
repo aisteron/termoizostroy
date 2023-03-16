@@ -63,7 +63,7 @@
         &.open
           display: block
         .mobile
-          display: flex
+          display: flex !important
           background-color: #F0F0F1
           height: 50px
           justify-content: space-between
@@ -136,7 +136,8 @@
             img
               width: 150px
           @media(max-width: 500px)
-            height: 200px    
+            height: 200px
+            margin-top: 2rem    
         .nav
           width: 800px
           font-size: 24px
@@ -466,8 +467,7 @@ body
             font-size: 20px
             padding-left: 50px
             @media(max-width: 1060px)
-              font-size: 1rem
-    
+              font-size: 1rem  
     .production
       @media(max-width: 768px)
         padding: 0 20px 
@@ -553,81 +553,6 @@ body
           margin-right: auto
           @media(max-width: 1170px) 
             width: 80%
-    .permits
-      margin-bottom: 70px
-      .inner
-        width: 1170px
-        margin: 0 auto
-        padding-bottom: 70px
-        position: relative
-        @media(max-width: 1170px) 
-          width: 100%
-          padding: 0 20px
-          padding-bottom: 60px
-        h2
-          font-size: 48px
-          padding-top: 30px
-          font-weight: normal
-          @media(max-width: 768px) 
-            font-size: 36px
-        p
-          font-size: 24px
-          width: 700px
-          color: #282828
-          position: relative
-          margin-bottom: 50px
-          padding-left: 70px
-          @media(max-width: 768px) 
-            font-size: 1rem
-            padding-left: 50px
-            margin-bottom: 30px
-            width: 90%
-            &:before
-              transform: scale(0.8)  
-              top: -12px
-          &:before
-            position: absolute
-            content: url(/assets/img/pages/home/271.svg)
-            top: 0
-            left: 0
-      .permit-swiper
-        position: relative
-        overflow: hidden
-        list-style: none
-        padding: 0
-        z-index: 1
-        @media(max-width: 1100px) 
-          .swiper-slide
-            img
-              width: 100%
-      .arrows       
-        position: relative
-        top: 40px
-        display: flex
-        justify-content: center
-      .swiper-button-next
-        right: -70px
-        display: flex
-        @media(max-width: 1100px)
-          right: auto 
-          position: relative
-          width: 36px
-          height: 36px
-          &:after
-            transform: scale(0.8)
-      .swiper-button-prev
-        left: -70px
-        display: flex
-        @media(max-width: 1100px)
-          left: auto
-          position: relative
-          margin-right: 50px
-          width: 36px
-          height: 36px
-          &:after
-            transform: scale(0.8)
-
-
     .how-to-order
       .inner
         width: 1170px
@@ -737,138 +662,6 @@ body
           right: 0
           margin-left: auto
           margin-right: auto
-    .order
-      .inner
-        width: 1170px
-        margin: 0 auto
-        display: flex
-        justify-content: space-between
-        align-items: center
-        height: 587px
-
-        @media(max-width: 1340px)
-          width: 100%
-          padding: 0 20px
-        @media(max-width: 780px)
-          height: auto
-          padding-bottom: 40px  
-        .left
-          color: #fff
-          align-self: baseline
-          h3
-            font-size: 48px
-            font-weight: normal
-            margin-bottom: 24px
-            @media(max-width: 1340px)
-              font-size: 36px
-            @media(max-width: 760px)
-              font-size: 20px  
-          p
-            font-size: 36px
-            margin-top: 0
-            @media(max-width: 1340px)
-              font-size: 15px
-            @media(max-width: 760px)  
-              font-size: 1rem
-          form
-            input[type="text"]
-              background-color: transparent
-              border: none
-              border-bottom: 1px solid #fff
-              padding: 5px
-              display: block
-              width: 350px
-              margin-bottom: 20px
-              height: 40px
-              color: #fff
-              font-family: 'Marion'
-              font-size: 20px
-              @media(max-width: 780px)
-                width: 100%
-              &::placeholder
-                color: #dadada
-                font-family: 'Marion'
-                font-size: 20px
-                @media(max-width: 760px)
-                  font-size: 1rem
-              &:focus
-                outline: none
-                background-color: #819eb340
-            .person
-              font-size: 14px
-              margin-bottom: 20px
-              @media(max-width: 780px)
-                font-size: 13px
-              label
-                display: flex
-                align-items: center
-                cursor: pointer
-                &:hover
-                  opacity: 0.7
-              input[type="checkbox"]
-                display: none
-                &:checked ~ .checkmark
-                  &::after
-                    content: url(/assets/img/icons/ok.svg)
-                    position: absolute
-                    top: 4px
-                    left: 3px
-              .checkmark
-                width: 24px
-                height: 24px
-                border: 1px solid #EEEFF0
-                display: inline-block
-                position: relative
-                margin-right: 14px
-            .redbutton
-              outline: none
-              font-family: 'Marion'
-              font-size: 20px
-              border: none
-              box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
-              padding: 20px 70px
-  
-        .address
-          background: url(/assets/img/pages/home/80.jpg)
-          background-size: cover
-          width: 560px
-          height: 348px
-          box-shadow: $c7
-          padding: 40px
-          @media(max-width: 1340px)
-            width: 340px
-            height: auto
-            padding: 24px
-          @media(max-width: 760px)
-            display: none  
-          span.h3
-            font-size: 40px
-            color: $red
-            margin-bottom: 20px
-            display: block
-            @media(max-width: 780px)
-              font-size: 20px
-          ul
-            color: $grey
-            &:nth-of-type(1)
-              margin-bottom: 20px
-              li
-                line-height: 200%
-                &:nth-of-type(1)
-                  font-size: 18px
-                &:nth-of-type(2)
-                  font-size: 24px
-                  @media(max-width: 780px)
-                    font-size: 1rem
-            &:nth-last-of-type(2)
-              font-size: 18px
-                    
-                    
-            li
-              display: flex
-              align-items: center
-              img
-                margin-right: 10px
     .map
       height: 528px
       @media(max-width: 600px)
@@ -917,19 +710,74 @@ body
               img
                 margin-right: 10px  
   &.about-page
-    .inner
+    >.wrapper>.inner
       width: 1170px
       margin: 0 auto
-      @media(max-width: 1170px)
+      @media(max-width: 1330px)
         width: 100%
+        padding: 0 20px
       .wrap  
         display: flex
         justify-content: space-between
         aside
           width: 370px
           min-width: 370px
-          border: 1px solid #0173BD
+          border: 1px solid rgba(40, 169, 225, 1)
           margin-left: 30px
+          padding: 1rem
+          align-self: start
+          margin-top: 160px
+          @media(max-width: 1190px)
+            min-width: auto
+            width: 100%
+          @media(max-width: 850px)  
+            width: 223px
+            ul
+              li
+                img
+                  transform: scale(0.7)
+                  margin-left: -30px
+          @media(max-width: 720px)
+            display: none        
+          h5
+            font-size: 1rem
+            margin: 0
+            margin-bottom: 10px
+          ul
+            li
+              background-color: #F5F6F7
+              padding: 10px
+              padding-bottom: 20px
+              border-bottom: 1px solid rgba(40, 169, 225, 1)
+              margin-bottom: 10px
+              position: relative
+              &:last-of-type
+                border-bottom: none
+              &:after
+                content: ""
+                position: absolute
+                bottom: 0
+                left: 0
+                width: 100%
+                height: 10px
+                background-color: #fff  
+              img
+                display: block
+                margin: 0 auto
+              a
+                text-decoration: none
+                color: #282828
+                &::after
+                  position: absolute
+                  top: 0
+                  right: 0
+                  bottom: 0
+                  left: 0
+                  z-index: 1
+                  content: ""
+                &:hover
+                  color: #1D9AD7
+
         article
           flex-grow: 1
           h1
@@ -937,11 +785,15 @@ body
             font-weight: normal
           h2
             font-size: 32px
-            font-weight: normal  
+            font-weight: normal
+            @media(max-width: 500px)
+              font-size: 20px  
           p
             font-size: 24px
             color: $black
             line-height: 25px
+            @media(max-width: 1060px)
+              font-size: 1rem
             &.squares
               position: relative
               padding-left: 48px
@@ -950,8 +802,79 @@ body
                 position: absolute
                 left: -1px
                 top: 1px
+          
+          .features.three
+           
+            @media(max-width: 1060px)
+              padding: 20px
+              margin-left: -20px
+              ul
+                li      
+                  width: 134px
+                  height: 74px
+                  font-size: 12px
+                  img
+                    transform: scale(0.8)
+                    @media(max-width: 768px)
+                      margin-right: 0
+            @media(max-width: 500px)
+              ul           
+                flex-direction: column
+                li
+                  width: 100% !important
+                  margin-bottom: 20px
+                  justify-content: center
+                  
+                  img
+                    transform: scale(1)
+                    margin-right: 10px !important
+                  span
+                    min-width: 70px
+                    text-align: left
+                    font-size: 14px
 
+    
+    .wrap.square
+      height: 492px
+      display: flex
+      align-items: center
+      justify-content: center
+      @media(max-width: 980px)
+        height: auto
+        padding: 50px 20px
 
+      .notification
+        width: 1031px
+        height: 190px
+        display: flex
+        align-items: center
+        justify-content: center
+        text-align: center
+        line-height: 42px
+        box-shadow: $c7
+        @media(max-width: 980px)
+          width: 85%
+          height: 90px
+          line-height: 100%
+          background-size: cover
+          &:before
+            content: url(/assets/img/pages/home/271.svg)
+            @media(max-width: 724px)
+              left: -45px
+              transform: scale(0.8)
+              top: -11px
+        span
+          width: 90%
+          @media(max-width: 980px)
+            font-size: 20px
+          @media(max-width: 400px)  
+            font-size: 1rem
+  &.catalog-page
+    .inner
+      margin: 0 auto
+      width: 1170px
+      @media(max-width: 1170px)
+        width: 100%
 
 
           
