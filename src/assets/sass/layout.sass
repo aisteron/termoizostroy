@@ -275,6 +275,11 @@ section#nav
       &.active a
         color: #00316E
       &:first-of-type
+        a
+          padding-left: 0
+      &:last-of-type
+        a
+          padding-right: 0    
         @media(max-width: 860px)
           a
             padding-left: 20px  
@@ -819,9 +824,13 @@ body
         .notification
           background-size: cover
           padding: 50px
-          box-shadow: $c7 
+          box-shadow: $c7
+          width: 88%
+          margin-left: 60px 
           .blue
             color: #3498D9
+          &:before
+            left: -62px  
           @media(max-width: 960px)
             padding: 20px
             width: 400px
@@ -859,4 +868,654 @@ body
           font-size: 36px
         @media(max-width: 400px)  
           font-size: 20px !important
-          
+          margin-top: 20px
+      h2
+        font-size: 32px
+        font-weight: normal
+        @media(max-width: 768px)
+          font-size: 24px  
+      .dsc
+        display: flex
+        @media(max-width: 1150px)
+          p
+            font-size: 1rem !important
+            &.squares
+              margin-bottom: 2rem
+              margin-top: 0
+        @media(max-width: 680px)
+          flex-wrap: wrap
+          .txt
+            margin-left: 0      
+        .img
+          min-width: 474px
+          @media(max-width: 1150px)
+            min-width: 328px
+          @media(max-width: 400px)  
+            min-width: 100%
+          img
+            width: 100%
+        .txt
+          font-size: 24px
+          margin-left: 32px
+          min-width: 348px
+          .squares
+            padding-left: 53px
+            position: relative
+            margin-bottom: 50px
+            &:after
+              position: absolute
+              top: 1px
+              left: 1px
+              content: url(/assets/img/pages/home/271.svg)
+            @media(max-width: 1150px)
+              padding-left: 38px
+              margin-bottom: 24px
+              &:after
+                transform: scale(0.6)
+                top: -23px
+                left: -6px
+
+          .warn
+            padding-left: 53px
+            position: relative
+            &:after
+              position: absolute
+              top: 1px
+              left: 1px
+              content: url(/assets/img/icons/ex.svg)
+          .s18
+            font-size: 30px
+            text-decoration: underline        
+
+      .features.two
+        background: url(/assets/img/pages/product2/66.png)
+        padding: 67px
+        @media(max-width: 1190px)
+          padding: 45px
+          margin-left: -20px
+          margin-right: -20px
+          @media(max-width: 760px)
+            padding: 20px
+            background: url(/assets/img/pages/product2/96.png)
+            background-size: cover
+          ul
+            li
+              width: 323px
+              height: 119px
+              dl
+                dt
+                  font-size: 24px
+                dd
+                  font-size: 14px  
+        ul
+          @media(max-width: 760px)
+            flex-direction: column
+            gap: 20px
+          li
+            width: 502px
+            height: 181px
+            text-align: center
+            display: flex
+            align-items: center
+            justify-content: center
+            dl
+              width: 80%
+
+              dt
+                font-size: 40px
+              dd
+                font-size: 24px
+                margin: 0
+      .squares
+        display: flex
+        @media(max-width: 610px)
+          flex-direction: column
+          ali
+          img
+            width: 160px
+            align-self: center
+          p
+            width: 100%  
+        p
+          font-size: 24px
+          width: 50%
+          @media(max-width: 1050px)
+            font-size: 1rem
+            padding-left: 40px !important
+            &.square
+              &:after
+                transform: scale(0.7)
+                top: -14px
+                left: -7px
+
+
+          &.square
+            position: relative
+            padding-left: 50px
+            &:after
+              content: url(/assets/img/pages/home/271.svg)
+              position: absolute
+              top: 1px
+              left: 1px
+      .size
+        img.table
+          width: 100%
+        .caption
+          font-size: 24px
+          @media(max-width: 768px)
+            font-size: 1rem
+            display: inline-block
+            margin-top: 10px
+    .wrap.square
+      padding: 50px 0
+      .notification
+        background-size: cover
+        padding: 50px
+        box-shadow: $c7
+        width: 88% 
+        left: 56px
+        .blue
+          color: #3498D9
+        @media(max-width: 960px)
+          padding: 20px
+          width: 400px
+          margin: 0 auto
+          &:before
+            content: url(/assets/img/pages/home/271.svg)
+            transform: scale(0.6)
+            left: -42px
+            top: -23px
+          span
+            font-size: 1rem
+        @media(max-width: 824px)
+          width: 75%
+          margin: inherit
+          left: 34px
+          span
+            line-height: 150%
+  &.product3-page
+    >.wrapper >.inner
+      width: 1170px
+      margin: 0 auto
+      @media(max-width: 1170px)
+        width: 100%
+        padding: 0 20px
+      h1
+        font-size: 48px
+        @media(max-width: 768px) 
+          font-size: 36px
+        @media(max-width: 400px)  
+          font-size: 20px !important
+          margin-top: 20px
+      h2
+        font-size: 32px
+        font-weight: normal
+        @media(max-width: 768px)
+          font-size: 24px
+      .dsc
+        display: flex
+        @media(max-width: 1150px)
+          p
+            font-size: 1rem !important
+            &.squares
+              margin-bottom: 2rem
+              margin-top: 0
+        @media(max-width: 680px)
+          flex-wrap: wrap
+          .txt
+            margin-left: 0      
+        .img
+          min-width: 474px
+          @media(max-width: 1150px)
+            min-width: 328px
+          @media(max-width: 400px)  
+            min-width: 100%
+          img
+            width: 100%
+        .txt
+          font-size: 24px
+          margin-left: 32px
+          min-width: 348px
+          .squares
+            padding-left: 53px
+            position: relative
+            margin-bottom: 50px
+            &:after
+              position: absolute
+              top: 1px
+              left: 1px
+              content: url(/assets/img/pages/home/271.svg)
+            @media(max-width: 1150px)
+              padding-left: 38px
+              margin-bottom: 24px
+              &:after
+                transform: scale(0.6)
+                top: -23px
+                left: -6px
+
+          .warn
+            padding-left: 53px
+            position: relative
+            &:after
+              position: absolute
+              top: 1px
+              left: 1px
+              content: url(/assets/img/icons/ex.svg)
+          .s18
+            font-size: 30px
+            text-decoration: underline        
+      
+      .wrap.square
+        padding: 50px 0
+        .notification
+          background-size: cover
+          padding: 50px
+          box-shadow: $c7
+          width: 88% 
+          left: 56px
+          .blue
+            color: #3498D9
+          @media(max-width: 960px)
+            padding: 20px
+            width: 400px
+            margin: 0 auto
+            &:before
+              content: url(/assets/img/pages/home/271.svg)
+              transform: scale(0.6)
+              left: -42px
+              top: -23px
+            span
+              font-size: 1rem
+          @media(max-width: 824px)
+            width: 75%
+            margin: inherit
+            left: 34px
+            span
+              line-height: 150%
+      
+      .geo
+        p
+          font-size: 32px
+          @media(max-width: 650px) 
+            font-size: 24px
+        img
+          display: block
+          margin: 0 auto
+          @media(max-width: 650px) 
+            width: 100%          
+  &.product4-page
+    >.wrapper >.inner
+      width: 1170px
+      margin: 0 auto
+      @media(max-width: 1170px)
+        width: 100%
+        padding: 0 20px
+      h1
+        font-size: 48px
+        @media(max-width: 768px) 
+          font-size: 36px
+        @media(max-width: 400px)  
+          font-size: 20px !important
+          margin-top: 20px
+      h2
+        font-size: 32px
+        font-weight: normal
+        @media(max-width: 768px)
+          font-size: 24px
+      .dsc
+        display: flex
+        @media(max-width: 1150px)
+          p
+            font-size: 1rem !important
+            &.squares
+              margin-bottom: 2rem
+              margin-top: 0
+        @media(max-width: 680px)
+          flex-wrap: wrap
+          .txt
+            margin-left: 0      
+        .img
+          min-width: 474px
+          @media(max-width: 1150px)
+            min-width: 328px
+          @media(max-width: 400px)  
+            min-width: 100%
+          img
+            width: 100%
+        .txt
+          font-size: 24px
+          margin-left: 32px
+          min-width: 348px
+          .squares
+            padding-left: 53px
+            position: relative
+            margin-bottom: 50px
+            &:after
+              position: absolute
+              top: 1px
+              left: 1px
+              content: url(/assets/img/pages/home/271.svg)
+            @media(max-width: 1150px)
+              padding-left: 38px
+              margin-bottom: 24px
+              &:after
+                transform: scale(0.6)
+                top: -23px
+                left: -6px
+
+          .warn
+            padding-left: 53px
+            position: relative
+            &:after
+              position: absolute
+              top: 1px
+              left: 1px
+              content: url(/assets/img/icons/ex.svg)
+          .s18
+            font-size: 30px
+            text-decoration: underline        
+      
+      .double_img
+        display: flex
+        justify-content: space-between
+        @media(max-width: 640px)
+          flex-direction: column
+          img
+            width: 90%
+        img
+          width: 50%
+          align-self: start
+      p.primer
+        font-size: 32px
+      img.primer
+        display: block
+        margin: 0 auto
+        @media(max-width: 640px)
+          width: 90%
+      .wrap.square
+        padding: 50px 0
+        .notification
+          background-size: cover
+          padding: 50px
+          box-shadow: $c7
+          width: 88% 
+          left: 56px
+          .blue
+            color: #3498D9
+          @media(max-width: 960px)
+            padding: 20px
+            width: 400px
+            margin: 0 auto
+            &:before
+              content: url(/assets/img/pages/home/271.svg)
+              transform: scale(0.6)
+              left: -42px
+              top: -23px
+            span
+              font-size: 1rem
+          @media(max-width: 824px)
+            width: 90%
+            margin: inherit
+            left: 34px
+            span
+              line-height: 150%
+  
+  &.product5-page
+    >.wrapper >.inner
+      width: 1170px
+      margin: 0 auto
+      @media(max-width: 1170px)
+        width: 100%
+        padding: 0 20px
+      h1
+        font-size: 48px
+        @media(max-width: 768px) 
+          font-size: 36px
+        @media(max-width: 400px)  
+          font-size: 20px !important
+          margin-top: 20px
+      h2
+        font-size: 32px
+        font-weight: normal
+        @media(max-width: 768px)
+          font-size: 24px
+      .dsc
+        display: flex
+        @media(max-width: 1150px)
+          p
+            font-size: 1rem !important
+            &.squares
+              margin-bottom: 2rem
+              margin-top: 0
+        @media(max-width: 680px)
+          flex-wrap: wrap
+          .txt
+            margin-left: 0      
+        .img
+          min-width: 474px
+          @media(max-width: 1150px)
+            min-width: 328px
+          @media(max-width: 400px)  
+            min-width: 100%
+          img
+            width: 100%
+        .txt
+          font-size: 24px
+          margin-left: 32px
+          min-width: 348px
+          .squares
+            padding-left: 53px
+            position: relative
+            margin-bottom: 50px
+            &:after
+              position: absolute
+              top: 1px
+              left: 1px
+              content: url(/assets/img/pages/home/271.svg)
+            @media(max-width: 1150px)
+              padding-left: 38px
+              margin-bottom: 24px
+              &:after
+                transform: scale(0.6)
+                top: -23px
+                left: -6px
+
+          .warn
+            padding-left: 53px
+            position: relative
+            &:after
+              position: absolute
+              top: 1px
+              left: 1px
+              content: url(/assets/img/icons/ex.svg)
+          .s18
+            font-size: 30px
+            text-decoration: underline        
+      .wrap.square
+        padding: 50px 0
+        .notification
+          background-size: cover
+          padding: 50px
+          box-shadow: $c7
+          width: 88% 
+          left: 56px
+          .blue
+            color: #3498D9
+          @media(max-width: 960px)
+            padding: 20px
+            width: 400px
+            margin: 0 auto
+            &:before
+              content: url(/assets/img/pages/home/271.svg)
+              transform: scale(0.6)
+              left: -42px
+              top: -23px
+            span
+              font-size: 1rem
+          @media(max-width: 824px)
+            width: 90%
+            margin: inherit
+            left: 34px
+            span
+              line-height: 150%
+      .complect
+        p
+          font-size: 32px
+          @media(max-width: 768px)
+            font-size: 24px  
+      .double_img
+        display: flex
+        justify-content: space-between
+        @media(max-width: 640px)
+          flex-direction: column
+          img
+            width: 90%
+        img
+          width: 50%
+          align-self: start
+    .video
+      .inner
+        width: 1170px
+        margin: 0 auto
+        @media(max-width: 1170px)
+          width: 100%
+          padding: 0 20px
+        .container
+          margin: 0 auto
+          position: relative
+          img.play
+            cursor: pointer
+            left: 0
+            right: 0
+            margin-left: auto
+            margin-right: auto
+            width: 122px
+            position: absolute
+            top: 40%
+            @media(max-width: 860px)
+              transform: scale(0.7)
+            @media(max-width: 480px)
+              top: 15%
+              transform: scale(0.3)  
+            &:hover
+              filter: invert(11%) sepia(79%) saturate(1697%) hue-rotate(201deg) brightness(96%) contrast(109%) 
+          img.placeholder
+            width: 100%
+  &.pay-page
+    >.wrapper >.inner
+      width: 1170px
+      margin: 0 auto
+      @media(max-width: 1170px)
+        width: 100%
+        padding: 0 20px
+      h1
+        font-size: 48px
+        font-weight: normal
+        @media(max-width: 768px) 
+          font-size: 36px
+        @media(max-width: 400px)  
+          font-size: 20px !important
+          margin-top: 20px
+      h2
+        font-weight: normal
+        @media(max-width: 768px)
+          font-size: 24px
+        @media(max-width: 400px)     
+          font-size: 18px
+      .wrap
+        display: flex
+        justify-content: space-between
+        font-size: 24px
+        @media(max-width: 768px)
+          font-size: 1rem
+          .right
+            img
+              width: 300px
+        @media(max-width: 660px)
+          flex-direction: column
+          .right
+            position: relative
+            img
+              display: none
+            &:after
+              content: url(/assets/img/pages/pay/globe.jpg)
+              position: absolute
+              top: -172px
+              
+              opacity: 0.4
+              z-index: -1
+              transform: scale(0.4)
+        ul
+          li
+            line-height: 140%
+        .left
+          max-width: 550px
+        .right
+          max-width: 480px      
+  &.contacts-page
+      >.wrapper >.inner
+        width: 1170px
+        margin: 0 auto
+        @media(max-width: 1170px)
+          width: 100%
+          padding: 0 20px
+        h1
+          font-size: 48px
+          font-weight: normal
+          @media(max-width: 768px) 
+            font-size: 36px
+          @media(max-width: 400px)  
+            font-size: 20px !important
+            margin-top: 20px
+        h3
+          font-size: 40px
+          font-weight: normal 
+          @media(max-width: 768px) 
+            font-size: 24px
+        .wrap
+          display: flex
+          justify-content: space-between
+          font-size: 24px
+          @media(max-width: 768px)
+            font-size: 1rem
+          @media(max-width: 580px)  
+            flex-direction: column
+            .map
+              iframe
+                height: 200px
+          .left
+            width: 340px
+            a
+              color: $black
+              text-decoration: none
+            ul.soc
+              display: flex
+              position: relative
+              top: 5px
+              li
+                margin-right: 5px
+            ul.tel
+              li
+                display: flex
+                align-items: center 
+                line-height: 250%
+                img + a
+                  display: inline-block
+                  margin: 0 14px
+                img + span
+                  display: inline-block
+                  margin: 0 14px      
+            img.map
+              margin-right: 10px
+            p.work
+              display: flex
+              align-items: center
+              img
+                margin-right: 10px  
+          .map
+            flex-grow: 1
+        .bank
+          p
+            font-size: 24px
+            @media(max-width: 768px)
+              font-size: 1rem
