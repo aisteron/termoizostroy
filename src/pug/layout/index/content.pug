@@ -53,46 +53,11 @@
 .production
   .inner
     h2 Наша продукция
-    ul
-      li
-        a(href="#") Муфты полиэтиленовые термоусаживаемые (МТУ)
-        img(src="/assets/img/pages/home/prod/01.png")
-      li
-        a(href="#") Лента клеевая герметизирующая термоплавкая
-        img(src="/assets/img/pages/home/prod/021.png")
-      li
-        a(href="#") Профиль для манжет стенового ввода
-        img(src="/assets/img/pages/home/prod/031.png")
-      li
-        a(href="#") Манжеты стенового ввода (МСВ)
-        img(src="/assets/img/pages/home/prod/041.png")
-      li
-        a(href="#") Комплекты заделки стыка (КЗС)
-        img(src="/assets/img/pages/home/prod/051.png")
+    include ../ui/prods
   .dots
 
 include ../ui/permit
-.how-to-order
-  .inner
-    h2 Как заказать продукцию?
-    ul
-      li.step1
-        .circle(style="background: url(/assets/img/pages/home/howto/279.png)")
-        span.step Шаг 1
-        p Вы оставляете заявку на нашем сайте или звоните нам по телефону
-      li.step2
-        .circle(style="background: url(/assets/img/pages/home/howto/280.png)")
-        span.step Шаг 2
-        p Уточняем детали, формируем договор и выставляем счёт
-      li.step3
-        .circle(style="background: url(/assets/img/pages/home/howto/281.png)")
-        span.step Шаг 3
-        p Вы оплачиваете выставленный счёт
-      li.step4
-        .circle(style="background: url(/assets/img/pages/home/howto/282.png)")
-        span.step Шаг 4
-        p Доставка или самовывоз со склада
-  .dots    
+include ../ui/howto
 include ../ui/order
 
 .map

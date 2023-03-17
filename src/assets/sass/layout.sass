@@ -468,68 +468,12 @@ body
             padding-left: 50px
             @media(max-width: 1060px)
               font-size: 1rem  
-    .production
-      @media(max-width: 768px)
-        padding: 0 20px 
-      .inner
-        width: 1200px
-        margin: 0 auto
-        @media(max-width: 1220px)
-          width: 100%
-          
+    .production      
       h2
         font-size: 48px
         font-weight: normal 
         @media(max-width: 768px)  
           font-size: 36px
-      ul
-        display: flex
-        flex-wrap: wrap
-        justify-content: center
-        li
-          min-width: 370px
-          min-height: 170px
-          width: 370px
-          height: 170px
-          background: linear-gradient(45deg,rgba(1,115,189,1)  0%, rgba(40,169,225,1) 100%)
-          margin-right: 30px
-          margin-bottom: 30px
-          box-shadow: $c7
-          display: flex
-          align-items: center
-          position: relative
-          transition: all 0.3s ease
-          @media(max-width: 460px) 
-            margin-right: 0
-            min-width: auto
-            width: 100%
-              
-          &:hover
-            background: linear-gradient(115deg,rgba(177, 41, 41, 1)  0%, rgba(210, 81, 81, 1) 100%)
-          a
-            font-size: 1rem
-            font-weight: bold
-            color: #fff
-            text-decoration: none
-            width: 150px
-            padding-left: 45px
-            @media(max-width: 460px)
-              padding-left: 20px
-            &:after
-              position: absolute
-              top: 0
-              right: 0
-              bottom: 0
-              left: 0
-              z-index: 1
-              content: ""
-          img
-            margin-right: -50px
-            @media(max-width: 460px) 
-              transform: scale(0.75)
-              margin-right: -40px
-              position: absolute
-              right: 0
       .dots
         height: 60px
         width: 100%
@@ -553,115 +497,6 @@ body
           margin-right: auto
           @media(max-width: 1170px) 
             width: 80%
-    .how-to-order
-      .inner
-        width: 1170px
-        margin: 0 auto
-        @media(max-width: 1170px)
-          width: 100%
-          padding: 0 20px
-          padding-bottom: 60px
-      h2
-        font-size: 48px
-        font-weight: normal
-        @media(max-width: 1200px)   
-          margin-top: 0
-        @media(max-width: 980px)
-          font-size: 36px
-        @media(max-width: 500px)
-          font-size: 20px
-      ul
-        display: flex
-        margin-top: 90px
-        @media(max-width: 1170px)
-          margin-left: -34px
-        @media(max-width: 980px)
-          margin-left: -46px
-        @media(max-width: 870px)    
-          flex-direction: column
-          margin-left: 0px !important
-          align-items: center
-        li
-          width: 288px
-          height: 257px
-          background: url('/assets/img/pages/home/howto/413.png')
-          text-align: center
-          display: flex
-          flex-direction: column
-          align-items: center
-          margin-right: 5px
-          position: relative
-          padding-top: 60px
-          @media(max-width: 1170px) 
-            transform: scale(0.8)
-            min-width: 288px
-            margin-left: -40px
-            &:first-of-type
-              margin-left: 0
-          @media(max-width: 1170px) 
-            margin-left: -55px
-          @media(max-width: 980px)
-            transform: scale(0.7)
-            margin-left: -82px
-          @media(max-width: 870px)
-            margin-left: 0 !important
-            transform: rotate(90deg)
-            flex-direction: initial
-            padding: 0
-            margin-bottom: 40px
-            height: 259px
-            >*
-              transform: rotate(-90deg)
-            span.step
-              left: 24px 
-            p
-              left: -40px
-              font-size: 1rem
-            &:nth-of-type(2), &:nth-of-type(4),
-              .circle
-                top: 190px
-            &:last-of-type
-              background: url('/assets/img/pages/home/howto/416.png')   
-          &:last-of-type
-            background: url('/assets/img/pages/home/howto/414.png')
-          .circle
-            width: 116px
-            height: 116px
-            position: absolute
-            top: -63px
-            left: 70px       
-          span.step
-            font-weight: bold
-            font-size: 32px
-            position: relative
-            left: -20px
-          p
-            max-width: 165px
-            font-size: 20px
-            position: relative
-            left: -20px
-            margin-top: 13px 
-
-      .dots
-        height: 60px
-        width: 100%
-        background: url(/assets/img/pages/home/255dot.svg)
-        background-size: cover
-        position: relative
-        top: -150px
-        z-index: -1
-        @media(max-width: 1200px)
-          display: none
-        &:after
-          content: ''
-          background-color: #fff
-          height: 100%
-          width: 1228px
-          position: absolute
-          left: -23px
-          right: 0
-          margin-left: auto
-          margin-right: auto
     .map
       height: 528px
       @media(max-width: 600px)
@@ -870,11 +705,158 @@ body
           @media(max-width: 400px)  
             font-size: 1rem
   &.catalog-page
-    .inner
+    >.wrapper>.inner
       margin: 0 auto
       width: 1170px
       @media(max-width: 1170px)
         width: 100%
+        padding: 0 20px
+      .production
+        @media (max-width: 768px)
+          padding: 0
+        @media(max-width: 1170px)
+          .inner
+            padding: 0
+        ul
+          justify-content: start
+          li
+            margin-right: 20px
+            margin-bottom: 20px
+    .order
+      .inner
+        .address
+          margin-right: 20px
 
 
+    .how-to-order
+      @media (max-width: 1200px)                
+        h2
+          margin-top: 20px
+  &.product1-page
+    >.wrapper >.inner
+      width: 1170px
+      margin: 0 auto
+      @media(max-width: 1170px)
+        width: 100%
+        padding: 0 20px
+      h1
+        font-size: 48px
+        @media(max-width: 768px) 
+          font-size: 36px
+        @media(max-width: 400px)  
+          font-size: 20px !important
+      .img
+        min-width: 570px
+        height: 465px
+        background-size: cover
+        @media(max-width: 990px)  
+          min-width: 50%
+          height: auto
+          background-size: cover
+          @media(max-width: 680px)
+            height: 270px
+            min-width: 100%
+            margin-bottom: 2rem
+      .dsc
+        display: flex
+        @media(max-width: 1150px)
+          p
+            font-size: 1rem !important
+            &.squares
+              margin-bottom: 2rem
+              margin-top: 0
+        @media(max-width: 680px)
+          flex-wrap: wrap
+          .txt
+            margin-left: 0      
+        .txt
+          font-size: 24px
+          margin-left: 32px
+          .squares
+            padding-left: 53px
+            position: relative
+            &:after
+              position: absolute
+              top: 1px
+              left: 1px
+              content: url(/assets/img/pages/home/271.svg)
+          .warn
+            padding-left: 53px
+            position: relative
+            &:after
+              position: absolute
+              top: 1px
+              left: 1px
+              content: url(/assets/img/icons/ex.svg)
+          .s18
+            font-size: 30px
+            text-decoration: underline    
+      h2
+        font-size: 32px
+        font-weight: normal
+        @media(max-width: 500px)
+          font-size: 18px
+      .features
+        @media(max-width: 800px)
+          padding: 20px
+          ul li
+            font-size: 14px
+        @media(max-width: 560px)
+          ul
+            flex-direction: column
+            li
+              width: 100%
+              margin-bottom: 20px  
+        ul
+          li
+            width: 320px
+            padding: 0 20px
+            margin-right: 20px
+            &:last-of-type
+              margin-right: 0
+      .wrap.square
+        padding: 50px 0
+        .notification
+          background-size: cover
+          padding: 50px
+          box-shadow: $c7 
+          .blue
+            color: #3498D9
+          @media(max-width: 960px)
+            padding: 20px
+            width: 400px
+            margin: 0 auto
+            &:before
+              content: url(/assets/img/pages/home/271.svg)
+              transform: scale(0.6)
+              left: -38px
+              top: -23px
+            span
+              font-size: 1rem
+          @media(max-width: 824px)
+            width: 80%
+            span
+              line-height: 150%
+                   
+      .chars
+        display: flex
+        @media(max-width: 500px)
+          flex-direction: column-reverse
+        .table
+          margin-left: -10px
+        .legend
+          align-self: baseline          
+  &.product2-page
+    >.wrapper >.inner
+      width: 1170px
+      margin: 0 auto
+      @media(max-width: 1170px)
+        width: 100%
+        padding: 0 20px
+      h1
+        font-size: 48px
+        @media(max-width: 768px) 
+          font-size: 36px
+        @media(max-width: 400px)  
+          font-size: 20px !important
           

@@ -1,9 +1,22 @@
-import {qs} from '../libs';
+import {qs,loadCSS,onloadCSS} from '../libs';
+import { swiper } from '../pages/home/swiper';
 
-export function Ui(){
+export async function Ui(){
+
   open_phone_mobile_menu()
   open_mobile_menu()
   open_prods_in_mobile_menu()
+
+  qs('[data-fancybox]')
+  && fancy.load().then(_ => fancy.init())
+
+  qs('.permits')
+  && swiper.load().then(_ => swiper.permit_init())
+
+  qs('.interest')
+  && swiper.load().then(_ => swiper.interest_init())
+
+
 }
 
 function open_phone_mobile_menu(){
@@ -41,4 +54,24 @@ function open_prods_in_mobile_menu(){
   qs('li.c').addEventListener('click', event => {
     qs('li.c').classList.toggle('open')
   })
+}
+
+let fancy = {
+  async load(){
+    return new Promise(resolve => {
+      let script = document.createElement("script")
+      script.src = "/vendors/fancy/fancybox.umd.js"
+      qs(".scripts-area").appendChild(script)
+
+      script.onload = () => {
+        let style = loadCSS("/vendors/fancy/fancybox.css")
+        onloadCSS(style, () => {
+          resolve(true)
+        })
+      }
+    })
+  },
+  init(){
+    Fancybox.bind("[data-fancybox]");
+  }
 }

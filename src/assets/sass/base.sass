@@ -27,6 +27,7 @@ body
 	margin: 0
 	padding: 0
 	font-family: 'Marion', serif
+  background: #F9FAFB
 
 ul
 	margin: 0
@@ -34,25 +35,40 @@ ul
 	list-style: none
 	&.bread
 		display: flex
+		flex-wrap: wrap
 		margin-top: 44px
+		@media(max-width: 400px)
+			margin-top: 20px
 		a
 			text-decoration: none
 			font-size: 24px
 			color: $black
+			@media(max-width: 768px)
+				font-size: 16px !important
+			@media(max-width: 400px)
+				font-size: 14px !important
 			&:hover
 				text-decoration: underline
 		li
 			margin-right: 35px
 			position: relative
+			@media(max-width: 400px)
+				line-height: 150%
+				&:after
+					font-size: 14px
+				&:last-of-type
+					line-height: 100%		
 			&:after
 				content: '//'
 				position: absolute
 				right: -26px
 				top: 0
 				font-size: 24px
+								
 			&:last-of-type
 				&:after
-					content: ''	
+					content: ''
+		
 .indent
 	text-indent: 1rem 
 
@@ -322,4 +338,246 @@ ul
     position: absolute
     left: -47px
     top: 1px
-      
+
+.production
+  @media(max-width: 768px)
+    padding: 0 20px 
+  .inner
+    width: 1200px
+    margin: 0 auto
+    @media(max-width: 1220px)
+      width: 100%        
+  ul
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    li
+      min-width: 370px
+      min-height: 170px
+      width: 370px
+      height: 170px
+      background: linear-gradient(45deg,rgba(1,115,189,1)  0%, rgba(40,169,225,1) 100%)
+      margin-right: 30px
+      margin-bottom: 30px
+      box-shadow: $c7
+      display: flex
+      align-items: center
+      position: relative
+      transition: all 0.3s ease
+      @media(max-width: 460px) 
+        margin-right: 0
+        min-width: auto
+        width: 100%  
+      &.new
+        padding-left: 45px
+        color: #fff
+        &:after
+          top: 1px
+          right: 1px
+          position: absolute
+          content: 'Скоро в продаже' 
+          background-color: $red
+          color: #fff
+          font-size: 12px
+          font-weight: bold
+          padding: 13px 16px
+      &:hover
+        background: linear-gradient(115deg,rgba(177, 41, 41, 1)  0%, rgba(210, 81, 81, 1) 100%)
+      a
+        font-size: 1rem
+        font-weight: bold
+        color: #fff
+        text-decoration: none
+        width: 150px
+        padding-left: 45px
+        @media(max-width: 460px)
+          padding-left: 20px
+        &:after
+          position: absolute
+          top: 0
+          right: 0
+          bottom: 0
+          left: 0
+          z-index: 1
+          content: ""
+      img
+        margin-right: -50px
+        @media(max-width: 460px) 
+          transform: scale(0.75)
+          margin-right: -40px
+          position: absolute
+          right: 0
+
+.how-to-order
+  .inner
+    width: 1170px
+    margin: 0 auto
+    @media(max-width: 1170px)
+      width: 100%
+      padding: 0 20px
+      padding-bottom: 60px
+  h2
+    font-size: 48px
+    font-weight: normal
+    @media(max-width: 1200px)   
+      margin-top: 0
+    @media(max-width: 980px)
+      font-size: 36px
+    @media(max-width: 500px)
+      font-size: 20px
+  ul
+    display: flex
+    margin-top: 90px
+    @media(max-width: 1170px)
+      margin-left: -34px
+    @media(max-width: 980px)
+      margin-left: -46px
+    @media(max-width: 870px)    
+      flex-direction: column
+      margin-left: 0px !important
+      align-items: center
+    li
+      width: 288px
+      height: 257px
+      background: url('/assets/img/pages/home/howto/413.png')
+      text-align: center
+      display: flex
+      flex-direction: column
+      align-items: center
+      margin-right: 5px
+      position: relative
+      padding-top: 60px
+      @media(max-width: 1170px) 
+        transform: scale(0.8)
+        min-width: 288px
+        margin-left: -40px
+        &:first-of-type
+          margin-left: 0
+      @media(max-width: 1170px) 
+        margin-left: -55px
+      @media(max-width: 980px)
+        transform: scale(0.7)
+        margin-left: -82px
+      @media(max-width: 870px)
+        margin-left: 0 !important
+        transform: rotate(90deg)
+        flex-direction: initial
+        padding: 0
+        margin-bottom: 40px
+        height: 259px
+        >*
+          transform: rotate(-90deg)
+        span.step
+          left: 24px 
+        p
+          left: -40px
+          font-size: 1rem
+        &:nth-of-type(2), &:nth-of-type(4),
+          .circle
+            top: 190px
+        &:last-of-type
+          background: url('/assets/img/pages/home/howto/416.png')   
+      &:last-of-type
+        background: url('/assets/img/pages/home/howto/414.png')
+      .circle
+        width: 116px
+        height: 116px
+        position: absolute
+        top: -63px
+        left: 70px       
+      span.step
+        font-weight: bold
+        font-size: 32px
+        position: relative
+        left: -20px
+      p
+        max-width: 165px
+        font-size: 20px
+        position: relative
+        left: -20px
+        margin-top: 13px 
+  .dots
+    height: 60px
+    width: 100%
+    background: url(/assets/img/pages/home/255dot.svg)
+    background-size: cover
+    position: relative
+    top: -150px
+    z-index: -1
+    @media(max-width: 1200px)
+      display: none
+    &:after
+      content: ''
+      background-color: #fff
+      height: 100%
+      width: 1228px
+      position: absolute
+      left: -23px
+      right: 0
+      margin-left: auto
+      margin-right: auto
+
+.interest
+  margin-bottom: 20px
+  .inner
+    width: 1170px
+    margin: 0 auto
+    position: relative
+    @media(max-width: 1170px)
+      width: 100%
+      padding: 0 20px
+      .swiper-wrapper
+        flex-wrap: wrap
+      .swiper-slide
+        margin: 10px
+      .swiper-button-prev, .swiper-button-next
+        display: none
+    h2
+      font-size: 48px
+      @media(max-width: 500px)
+        font-size: 18px
+    .interest-swiper
+      position: relative
+      overflow: hidden
+      list-style: none
+      padding: 0
+      z-index: 1
+      .swiper-slide
+        width: 370px
+        height: 180px
+        background: $bluegrad
+        display: flex
+        align-items: center
+        position: relative
+        @media(max-width: 460px)
+          width: 100%
+          margin-left: 0
+          margin-bottom: 13px
+          img
+            transform: scale(0.6)
+            position: absolute
+            right: -20%
+          a
+            width: 20%  
+        &:hover
+          background: linear-gradient(115deg,#b12929,#d25151)
+        a
+          color: #fff
+          text-decoration: none
+          padding-left: 30px
+          @media(max-width: 460px)
+            padding-left: 20px
+          &:after
+            content: ""
+            position: absolute
+            top: 0
+            bottom: 0
+            left: 0
+            right: 0
+    .swiper-button-prev
+      left: -60px
+      top: 68%       
+    .swiper-button-next
+      right: -60px
+      top: 68%       
+
