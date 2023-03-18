@@ -1,4 +1,4 @@
-import {qs,loadCSS,onloadCSS} from '../libs';
+import {qs,loadCSS,onloadCSS, load_toast} from '../libs';
 import { swiper } from '../pages/home/swiper';
 
 export async function Ui(){
@@ -6,6 +6,9 @@ export async function Ui(){
   open_phone_mobile_menu()
   open_mobile_menu()
   open_prods_in_mobile_menu()
+  scroll_top_form()
+
+  form_send()
 
   qs('[data-fancybox]')
   && fancy.load().then(_ => fancy.init())
@@ -74,4 +77,48 @@ let fancy = {
   init(){
     Fancybox.bind("[data-fancybox]");
   }
+}
+
+function scroll_top_form(){
+  
+  if(!qs('header .redbutton')) return
+  if(!qs('#order')) return
+  qs('header .redbutton').addEventListener("click", event => {
+
+    qs('#order').scrollIntoView({ behavior: 'smooth', block: 'center'})
+  })
+}
+
+function form_send(){
+  if(!qs('#order')) return
+  let obj = {
+    name: qs('[name="name"]').value,
+    phone: qs('[name="phone"]').value,
+  }
+  qs("#order form").addEventListener("submit", event => {
+    event.preventDefault()
+    
+    fetch("/api/order",{
+      method: "POST",
+      headers:{"Content-Type":"application/json"},
+      body: JSON.stringify(obj)
+    })
+    .then(r => r.json())
+    .then(r => {
+      if(r.success){
+        load_toast()
+        .then(_ => {
+          new Snackbar("Успешно!")
+          qs('[name="name"]').value = ''
+          qs('[name="phone"]').value = ''
+        })
+        
+      } else {
+        load_toast()
+        .then(_ => new Snackbar("Произошла ошибка!"))
+        
+      }
+    })
+  })
+
 }

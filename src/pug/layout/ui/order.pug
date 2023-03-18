@@ -1,11 +1,11 @@
-.order.lazyload(data-bg="/assets/img/pages/home/order/415bg.jpg")
+#order.order.lazyload(data-bg="/assets/img/pages/home/order/415bg.jpg")
   .inner
     .left
       h3 Заказать продукцию
       p Оставьте заявку и наши менеджеры свяжутся с вами
       form
-        input(type="text" required placeholder="Имя *")
-        input(type="text" required placeholder="Телефон для связи*")
+        input(type="text" required placeholder="Имя *" name="name")
+        input(type="text" required placeholder="Телефон для связи*" name="phone")
         .person
           label
             input(type="checkbox" checked)

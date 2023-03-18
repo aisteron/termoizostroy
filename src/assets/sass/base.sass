@@ -20,6 +20,7 @@ $c7: -5px -5px 10px #c7c7c7
 
 html
   box-sizing: border-box
+  scroll-behavior: smooth
 *, *:before, *:after
   box-sizing: inherit
 
@@ -639,6 +640,46 @@ ul
         position: absolute
   img
     @media(max-width: 920px)
-      width: 223px    
-            
+      width: 223px
 
+  
+.floating-phone
+  position: fixed
+  bottom: 1rem
+  right: 1rem
+  .wrap
+    width: 78px
+    height: 78px
+    background-color: #2CA639
+    position: relative
+    border-radius: 50%
+    border: 5px solid #80cb95
+    animation: breathing 5s  linear infinite
+    cursor: pointer
+    @media(max-width: 768px)
+      width: 53px
+      height: 53px
+      img
+        width: 21px
+    img
+      position: absolute
+      top: 25%
+      left: 25%
+      width: 34px
+    &:hover
+      background-color: #fff
+      img
+        filter: brightness(0)
+        filter: saturate(100%)
+        filter: invert(45%) sepia(65%) saturate(760%) hue-rotate(69deg) brightness(100%) contrast(85%)
+@keyframes breathing 
+  0%
+		transform: scale(0.9) 
+  25%
+	  transform: scale(1)
+    border-color: #40b15f
+  60%
+    transform: scale(0.9)
+    border-color: #0d9c35
+  100% 
+    transform: scale(1) 

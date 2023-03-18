@@ -287,6 +287,10 @@ section#nav
         @media(max-width: 860px)
           a
             padding-right: 20px  
+      &:first-of-type
+        @media(max-width: 860px)
+          a
+            padding-left: 20px  
       a
         padding: 25px
         color: #fff
@@ -1396,7 +1400,7 @@ body
               transform: scale(0.7)
             @media(max-width: 480px)
               top: 15%
-              transform: scale(0.3)  
+              transform: scale(0.5)  
             &:hover
               filter: invert(11%) sepia(79%) saturate(1697%) hue-rotate(201deg) brightness(96%) contrast(109%) 
           img.placeholder
@@ -1519,3 +1523,39 @@ body
             font-size: 24px
             @media(max-width: 768px)
               font-size: 1rem
+  &.p404-page
+    >.wrapper >.inner
+      width: 1170px
+      margin: 0 auto
+      display: flex
+      justify-content: space-between
+      min-height: 540px
+      align-items: center
+      @media(max-width: 1170px)
+        width: 100%
+        padding: 0 20px
+      @media(max-width: 600px)
+        flex-direction: column-reverse
+        justify-content: center
+        .dsc
+          margin-top: 4rem
+        img.p404
+          width: 127px
+      .dsc
+        align-self: top  
+      h1
+        font-size: 48px
+        font-weight: normal
+        margin-top: 0
+        @media(max-width: 768px) 
+          font-size: 36px
+        @media(max-width: 400px)  
+          font-size: 20px !important
+          margin-top: 20px
+      h2
+        margin-bottom: 3rem    
+      a.redbutton
+        text-decoration: none
+      img.p404
+        //align-self: baseline
+          
