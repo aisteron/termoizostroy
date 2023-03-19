@@ -18,11 +18,15 @@ export let swiper = {
   },
 
   init() {
+    let autoplay = {}
+    process.env.NODE_ENV == 'development'
+    ? autoplay = false
+    : autoplay = {
+      delay: 2500,
+      disableOnInteraction: true,
+    }
     var swiper = new Swiper(".swiper", {
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: true,
-      },
+      autoplay: autoplay,
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",

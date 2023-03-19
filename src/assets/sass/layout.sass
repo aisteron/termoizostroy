@@ -336,6 +336,7 @@ body
             width: 100%
           .h1
             font-size: 56px
+            color: $black
             @media(max-width: 1340px)
               font-size: 32px
             @media(max-width: 700px)
@@ -348,13 +349,15 @@ body
               font-size: 20px
             @media(max-width: 700px)
               font-size: 1rem !important
-              width: 95% 
+              width: 95%
+              color: #4D4D52 
           .redbutton
             width: 173px 
             padding: 20px 28px
             font-size: 20px
             text-decoration: none
             position: relative
+            text-align: center
             @media(max-width: 1340px)
               font-size: 1rem
               width: 136px
@@ -423,7 +426,9 @@ body
           padding: 0   
          
       .circle
-        height: 70%
+        //height: 70%
+        height: 592px
+        width: 655px
         flex-grow: 1
         background-size: contain
         background-repeat: no-repeat
@@ -467,7 +472,10 @@ body
             content: url('/assets/img/pages/home/271.svg')
             position: absolute
             top: 97px
-
+            @media(max-width: 400px) 
+              transform: scale(0.6)
+              top: 50px
+              left: 14px
           h1
             font-size: 24px
             @media(max-width: 1060px)
@@ -476,7 +484,11 @@ body
             font-size: 20px
             padding-left: 50px
             @media(max-width: 1060px)
-              font-size: 1rem  
+              font-size: 1rem
+            @media(max-width: 400px)  
+              padding-left: 35px
+
+                    
     .production      
       h2
         font-size: 48px
@@ -720,17 +732,37 @@ body
       @media(max-width: 1170px)
         width: 100%
         padding: 0 20px
+      h1
+        margin-top: 100px  
       .production
         @media (max-width: 768px)
           padding: 0
+          h1
+            margin-top: 50px
+          ul
+            margin-top: 50px
+            margin-bottom: 100px
+          @media (max-width: 400px)
+            h1
+              margin-top: 30px
+            ul  
+              margin-bottom: 40px
+              margin-top: 20px
+
         @media(max-width: 1170px)
           .inner
             padding: 0
         ul
           justify-content: start
+          margin-top: 85px
+          margin-bottom: 150px
           li
             margin-right: 20px
             margin-bottom: 20px
+            @media (max-width: 768px)
+              &:last-of-type
+                margin-bottom: 0
+
     .order
       .inner
         .address
