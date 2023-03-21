@@ -4,11 +4,11 @@ export let swiper = {
   async load() {
     return new Promise(resolve => {
       let script = document.createElement("script")
-      script.src = "/vendors/swiper/9swiper-bundle.min.js"
+      script.src = "/vendors/swiper/swiper-bundle.min.js"
       qs(".scripts-area").appendChild(script)
 
       script.onload = () => {
-        let style = loadCSS("/vendors/swiper/9swiper-bundle.min.css")
+        let style = loadCSS("/vendors/swiper/swiper-bundle.min.css")
         onloadCSS(style, () => {
           resolve(true)
         })
@@ -44,8 +44,8 @@ export let swiper = {
   permit_init() {
     var swiper = new Swiper(".permit-swiper", {
       navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-button-next.permit",
+        prevEl: ".swiper-button-prev.permit",
       },
       slidesPerView: 3,
       spaceBetween: 30,
