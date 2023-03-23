@@ -42,12 +42,14 @@ export let swiper = {
   },
 
   permit_init() {
+    let count = 1
+    innerWidth >= 400 && (count=3)
     var swiper = new Swiper(".permit-swiper", {
       navigation: {
         nextEl: ".swiper-button-next.permit",
         prevEl: ".swiper-button-prev.permit",
       },
-      slidesPerView: 3,
+      slidesPerView: count,
       spaceBetween: 30,
     });
   },
